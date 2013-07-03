@@ -24,7 +24,7 @@
 
 
 		<script src="libs/jquery.js"></script>
-		<script src="../src/easria.core.js"></script>
+		<script src="../src/easria.js"></script>
 
 		<script>
 			//Do
@@ -34,7 +34,11 @@
 					$s3 = $('.set3'),
 					$s4 = $('.set4');
 
-				easria.show($s1, $s2);
+				easria('hidden', true, $s1);
+				easria('hidden', true, [$s2]);
+				//easria('hidden', false, [$s3, $s4]);
+
+				easria.show($s3);
 			});
 		</script>
 	</body>
