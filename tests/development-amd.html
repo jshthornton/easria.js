@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>easria.js - Development</title>
+	</head>
+
+	<body>
+	  	<div class="set1"></div>
+	  	<div class="set1"></div>
+	  	<div class="set1"></div>
+
+	  	<div class="set2"></div>
+	  	<div class="set2"></div>
+	  	<div class="set2"></div>
+
+	  	<div class="set3"></div>
+	  	<div class="set3"></div>
+	  	<div class="set3"></div>
+
+	  	<div class="set4"></div>
+	  	<div class="set4"></div>
+	  	<div class="set4"></div>
+
+
+		<script src="libs/require.js"></script>
+		<script>
+			require.config({
+				baseUrl: "libs",
+
+				paths: {
+					easria: "../../src/easria.core"
+				}
+			});
+
+			//Do
+			require([
+				"jquery",
+				"easria"
+			], function($, easria) {
+				
+				$(document).ready(function() {
+					var $s1 = $('.set1'),
+						$s2 = $('.set2'),
+						$s3 = $('.set3'),
+						$s4 = $('.set4');
+
+					easria('hidden', true, $s1);
+					easria('hidden', true, [$s2]);
+					easria('hidden', false, [$s3, $s4]);
+				});
+			});
+			
+		</script>
+	</body>
+</html>
