@@ -31,7 +31,7 @@
 
 
 	if ( typeof define === 'function' && define.amd ) {
-		define( 'easria', [], function () { return easria; } );
+		define([], function () { return easria; } );
 	} else {
 		win.easria = easria;
 	}

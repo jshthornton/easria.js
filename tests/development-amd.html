@@ -29,14 +29,15 @@
 				baseUrl: "libs",
 
 				paths: {
-					easria: "../../src/easria.core"
+					easria: "../../src"
 				}
 			});
 
 			//Do
 			require([
 				"jquery",
-				"easria"
+				"easria/easria",
+				"easria/extensions/aliases"
 			], function($, easria) {
 				
 				$(document).ready(function() {
@@ -47,7 +48,9 @@
 
 					easria('hidden', true, $s1);
 					easria('hidden', true, [$s2]);
-					easria('hidden', false, [$s3, $s4]);
+					//easria('hidden', false, [$s3, $s4]);
+
+					easria.show($s3);
 				});
 			});
 			
